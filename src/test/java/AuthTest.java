@@ -1,5 +1,5 @@
 import com.codeborne.selenide.Selenide;
-import connect.ConnectionMySql;
+import data.MySqlHelper;
 import data.DataGenerator;
 import org.junit.jupiter.api.*;
 import page.LoginPage;
@@ -8,7 +8,7 @@ import page.LoginPage;
 public class AuthTest {
     @AfterAll
     static void setUp() {
-        new ConnectionMySql().RemoveDemoData();
+        new MySqlHelper().RemoveDemoData();
     }
 
     @Order(1)
@@ -19,8 +19,7 @@ public class AuthTest {
         var loginPage = Selenide.open("http://localhost:9999", LoginPage.class);
         var verificationPage = loginPage.validLogIn(dbUserInfo);
 
-
-        var validCodeFromDb = DataGenerator.VerificationCodeDb.getCodeFromMySql(dbUserInfo);
+        var validCodeFromDb = MySqlHelper.getVerificationCode(dbUserInfo);
         verificationPage.validVerify(validCodeFromDb);
     }
 
@@ -28,7 +27,7 @@ public class AuthTest {
     @Test
     void BlockedSystemTest() {
         var dbUserInfo = DataGenerator.getMySqlUser("vasya");
-        var invalidCode = DataGenerator.VerificationCodeDb.getRandomCode();
+        var invalidCode = DataGenerator.getRandomVerificationCode();
 
         var firstAuth = Selenide.open("http://localhost:9999", LoginPage.class);
         var firstVerificationPage = firstAuth.validLogIn(dbUserInfo);
