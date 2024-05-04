@@ -2,25 +2,25 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/528d137f7f82a9d4e1679de987557aad89c7cc88/docker-compose.yml">docker-compose.yml</a>. - с MySQL DB.
- * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/528d137f7f82a9d4e1679de987557aad89c7cc88/src/test/java/AuthTest.java">AuthTest.java</a>. - класс с автотестами.
- * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/528d137f7f82a9d4e1679de987557aad89c7cc88/schema/schema.sql">schema.sql</a>. - описание схемы DB.
+ * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/docker-compose.yml">docker-compose.yml</a>. - с MySQL DB.
+ * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/AuthTest.java">AuthTest.java</a>. - класс с автотестами.
+ * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/schema/schema.sql">schema.sql</a>. - описание схемы DB.
 
 ## Что было сделано
-  * Настроен <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/build.gradle">build.gradle</a> с зависимостями:
+  * Настроен <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/build.gradle">build.gradle</a> с зависимостями:
     * JunitJupier.
     * Lombok.
     * Faker.
     * Selenide.
     * MySQL.
-  * Реализован <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/docker-compose.yml">docker-compose.yml</a> с MySQL DB.
-  * Реализован <a href="https://github.com/Nephedov/9.Automated-Testing/tree/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/page">репозиторий</a> с классами описывающими элементы страниц приложения и методы взаимодействия с ними:
-    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/page/DashboardPage.java">DashboardPage.java</a>,
-    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/page/LoginPage.java">LoginPage.java</a>,
-    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/page/VerificationPage.java">VerificationPage.java</a>.
-  * Реализован класс генерации тестовых данных <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/data/DataGenerator.java">DataGenerator.java</a>.
-  * Реализовак класс с методами взаимодействия с базой данных <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/data/MySqlHelper.java">MySqlHelper.java</a>.
-  * Реализован класс с <a href="https://github.com/Nephedov/9.Automated-Testing/blob/105c67dfe4f7d41064106ae95e52e39994f34fac/src/test/java/AuthTest.java">автотестами</a> входа в систему.
+  * Реализован <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/docker-compose.yml">docker-compose.yml</a> с MySQL DB.
+  * Реализован <a href="https://github.com/Nephedov/9.Automated-Testing/tree/main/src/test/java/page">репозиторий</a> с классами описывающими элементы страниц приложения и методы взаимодействия с ними:
+    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/page/DashboardPage.java">DashboardPage.java</a>,
+    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/page/LoginPage.java">LoginPage.java</a>,
+    * <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/page/VerificationPage.java">VerificationPage.java</a>.
+  * Реализован класс генерации тестовых данных <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/data/DataGenerator.java">DataGenerator.java</a>.
+  * Реализовак класс с методами взаимодействия с базой данных <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/data/MySqlHelper.java">MySqlHelper.java</a>.
+  * Реализован класс с <a href="https://github.com/Nephedov/9.Automated-Testing/blob/main/src/test/java/AuthTest.java">автотестами</a> входа в систему.
 
 ## Задача №1: скоро дедлайн
 
